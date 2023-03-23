@@ -15,6 +15,7 @@
 		73D53F5929CC65D400308DD1 /* EmojiChessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F5829CC65D400308DD1 /* EmojiChessGame.swift */; };
 		73D53F6829CC72DB00308DD1 /* ChessGameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F6729CC72DB00308DD1 /* ChessGameTest.swift */; };
 		73D53F6A29CC772700308DD1 /* LetterChessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F6929CC772700308DD1 /* LetterChessGame.swift */; };
+		73D53F6C29CC7F6400308DD1 /* LetterChessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F6B29CC7F6400308DD1 /* LetterChessGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		73D53F5E29CC718D00308DD1 /* ChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D53F6729CC72DB00308DD1 /* ChessGameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGameTest.swift; sourceTree = "<group>"; };
 		73D53F6929CC772700308DD1 /* LetterChessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterChessGame.swift; sourceTree = "<group>"; };
+		73D53F6B29CC7F6400308DD1 /* LetterChessGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterChessGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */,
+				73D53F6B29CC7F6400308DD1 /* LetterChessGameView.swift */,
 				73D53F4529CC367A00308DD1 /* ChessApp.swift */,
 				73D53F5629CC624400308DD1 /* ChessGame.swift */,
 				73D53F6929CC772700308DD1 /* LetterChessGame.swift */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D53F5729CC624400308DD1 /* ChessGame.swift in Sources */,
+				73D53F6C29CC7F6400308DD1 /* LetterChessGameView.swift in Sources */,
 				73D53F4629CC367A00308DD1 /* ChessApp.swift in Sources */,
 				73D53F5529CC616700308DD1 /* EmojiChessGameView.swift in Sources */,
 				73D53F5929CC65D400308DD1 /* EmojiChessGame.swift in Sources */,

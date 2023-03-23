@@ -17,10 +17,7 @@ import Foundation
 //MARK: ViewModel
 class EmojiChessGame {
     
-//    static func createPieceContent(player: ChessGame<String>.Player, rank: ChessGame<String>.Rank) -> String {
-//        return "😄"
-//    }
-    private var chessGame: ChessGame<String> = createChessGame()
+    private var chessGame: ChessGame<String> = EmojiChessGame.createChessGame()
     
     private static func createChessGame() -> ChessGame<String> {
         return ChessGame<String> { (player, rank) -> String in

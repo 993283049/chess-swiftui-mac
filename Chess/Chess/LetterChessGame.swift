@@ -8,7 +8,7 @@
 import Foundation
 
 class LetterChessGame {
-    private var chessGame: ChessGame<String> = createChessGame()
+    private var chessGame: ChessGame<String> = LetterChessGame.createChessGame()
     
     private static func createChessGame() -> ChessGame<String> {
         return ChessGame<String> { (player, rank) -> String in
