@@ -19,8 +19,38 @@ import Foundation
 struct ChessGame<PieceContent> {
     private var pieces: Set<Piece>
       
-    init() {
+    init(pieceContentFactory: (Player, Rank) -> PieceContent) {
         pieces = []
+        initChessBoard(piceContentFactory: pieceContentFactory)
+    }
+    private mutating func initChessBoard(piceContentFactory: (Player, Rank) -> PieceContent) {
+//        let firstBlackPawn = Piece(col: 0, row: 6, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn))
+//        pieces.insert(firstBlackPawn)
+        
+        for i in 0..<8 {
+            pieces.insert(Piece(col: i, row: 6, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn)))
+            pieces.insert(Piece(col: i, row: 1, rank: .pawn, player: .white, content: piceContentFactory(.white, .pawn)))
+        }
+        
+        for i in 0..<2 {
+            pieces.insert(Piece(col: 0+7*i, row: 7, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn)))
+            pieces.insert(Piece(col: 0+7*i, row: 0, rank: .pawn, player: .white, content: piceContentFactory(.white, .pawn)))
+            
+            pieces.insert(Piece(col: 1+5*i, row: 7, rank: .knight, player: .black, content: piceContentFactory(.black, .knight)))
+            pieces.insert(Piece(col: 1+5*i, row: 0, rank: .knight, player: .white, content: piceContentFactory(.white, .knight)))
+            
+            pieces.insert(Piece(col: 2+3*i, row: 7, rank: .bishop, player: .black, content: piceContentFactory(.black, .bishop)))
+            pieces.insert(Piece(col: 2+3*i, row: 0, rank: .bishop, player: .white, content: piceContentFactory(.white, .bishop)))
+        }
+        
+        pieces.insert(Piece(col: 3, row: 7, rank: .queen, player: .black, content: piceContentFactory(.black, .queen)))
+        pieces.insert(Piece(col: 3, row: 0, rank: .queen, player: .white, content: piceContentFactory(.white, .queen)))
+        
+        
+        pieces.insert(Piece(col: 4, row: 7, rank: .king, player: .black, content: piceContentFactory(.black, .king)))
+        pieces.insert(Piece(col: 4, row: 0, rank: .king, player: .white, content: piceContentFactory(.white, .king)))
+        
+//            pieces.insert(Piece(col: i, row: 6, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn)))
     }
     func pieceAt(col: Int, row: Int) -> Piece? {
         for piece in pieces {
