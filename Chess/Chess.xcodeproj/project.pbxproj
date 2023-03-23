@@ -12,6 +12,7 @@
 		73D53F4D29CC367B00308DD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D53F4C29CC367B00308DD1 /* Preview Assets.xcassets */; };
 		73D53F5529CC616700308DD1 /* EmojiChessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */; };
 		73D53F5729CC624400308DD1 /* ChessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F5629CC624400308DD1 /* ChessGame.swift */; };
+		73D53F5929CC65D400308DD1 /* EmojiChessGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F5829CC65D400308DD1 /* EmojiChessGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		73D53F4E29CC367B00308DD1 /* Chess.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chess.entitlements; sourceTree = "<group>"; };
 		73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiChessGameView.swift; sourceTree = "<group>"; };
 		73D53F5629CC624400308DD1 /* ChessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGame.swift; sourceTree = "<group>"; };
+		73D53F5829CC65D400308DD1 /* EmojiChessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiChessGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */,
 				73D53F4529CC367A00308DD1 /* ChessApp.swift */,
 				73D53F5629CC624400308DD1 /* ChessGame.swift */,
+				73D53F5829CC65D400308DD1 /* EmojiChessGame.swift */,
 				73D53F4929CC367B00308DD1 /* Assets.xcassets */,
 				73D53F4E29CC367B00308DD1 /* Chess.entitlements */,
 				73D53F4B29CC367B00308DD1 /* Preview Content */,
@@ -145,6 +148,7 @@
 				73D53F5729CC624400308DD1 /* ChessGame.swift in Sources */,
 				73D53F4629CC367A00308DD1 /* ChessApp.swift in Sources */,
 				73D53F5529CC616700308DD1 /* EmojiChessGameView.swift in Sources */,
+				73D53F5929CC65D400308DD1 /* EmojiChessGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
