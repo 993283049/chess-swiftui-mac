@@ -9,13 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        // 8行 * 8列
+        VStack { // 8 行
+            // 8 views
+            ForEach(0..<8) {_ in
+//                Text("😊")
+                HStack { // 8 列
+                    ForEach(0..<8) {_ in
+                        PieceView()
+                    }
+                }
+                
+            }
         }
-        .padding()
+        
+            .font(.largeTitle)
+            .padding()
+    }
+}
+
+struct PieceView: View {
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 8).stroke()
+            Text("😊")
+        }
+        
+//            RoundedRectangle(cornerRadius: 8).stroke()
+//            Text("😊")
     }
 }
 
