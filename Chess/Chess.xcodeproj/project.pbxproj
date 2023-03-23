@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		73D53F4629CC367A00308DD1 /* ChessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F4529CC367A00308DD1 /* ChessApp.swift */; };
-		73D53F4829CC367A00308DD1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F4729CC367A00308DD1 /* ContentView.swift */; };
 		73D53F4A29CC367B00308DD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D53F4929CC367B00308DD1 /* Assets.xcassets */; };
 		73D53F4D29CC367B00308DD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D53F4C29CC367B00308DD1 /* Preview Assets.xcassets */; };
+		73D53F5529CC616700308DD1 /* EmojiChessGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73D53F4229CC367A00308DD1 /* Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D53F4529CC367A00308DD1 /* ChessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessApp.swift; sourceTree = "<group>"; };
-		73D53F4729CC367A00308DD1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73D53F4929CC367B00308DD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73D53F4C29CC367B00308DD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73D53F4E29CC367B00308DD1 /* Chess.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chess.entitlements; sourceTree = "<group>"; };
+		73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiChessGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +52,8 @@
 		73D53F4429CC367A00308DD1 /* Chess */ = {
 			isa = PBXGroup;
 			children = (
+				73D53F5429CC616700308DD1 /* EmojiChessGameView.swift */,
 				73D53F4529CC367A00308DD1 /* ChessApp.swift */,
-				73D53F4729CC367A00308DD1 /* ContentView.swift */,
 				73D53F4929CC367B00308DD1 /* Assets.xcassets */,
 				73D53F4E29CC367B00308DD1 /* Chess.entitlements */,
 				73D53F4B29CC367B00308DD1 /* Preview Content */,
@@ -139,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73D53F4829CC367A00308DD1 /* ContentView.swift in Sources */,
 				73D53F4629CC367A00308DD1 /* ChessApp.swift in Sources */,
+				73D53F5529CC616700308DD1 /* EmojiChessGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
