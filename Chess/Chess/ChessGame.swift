@@ -33,8 +33,8 @@ struct ChessGame<PieceContent> {
         }
         
         for i in 0..<2 {
-            pieces.insert(Piece(col: 0+7*i, row: 7, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn)))
-            pieces.insert(Piece(col: 0+7*i, row: 0, rank: .pawn, player: .white, content: piceContentFactory(.white, .pawn)))
+            pieces.insert(Piece(col: 0+7*i, row: 7, rank: .rook, player: .black, content: piceContentFactory(.black, .rook)))
+            pieces.insert(Piece(col: 0+7*i, row: 0, rank: .rook, player: .white, content: piceContentFactory(.white, .rook)))
             
             pieces.insert(Piece(col: 1+5*i, row: 7, rank: .knight, player: .black, content: piceContentFactory(.black, .knight)))
             pieces.insert(Piece(col: 1+5*i, row: 0, rank: .knight, player: .white, content: piceContentFactory(.white, .knight)))
@@ -50,7 +50,6 @@ struct ChessGame<PieceContent> {
         pieces.insert(Piece(col: 4, row: 7, rank: .king, player: .black, content: piceContentFactory(.black, .king)))
         pieces.insert(Piece(col: 4, row: 0, rank: .king, player: .white, content: piceContentFactory(.white, .king)))
         
-//            pieces.insert(Piece(col: i, row: 6, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn)))
     }
     func pieceAt(col: Int, row: Int) -> Piece? {
         for piece in pieces {
@@ -64,6 +63,9 @@ struct ChessGame<PieceContent> {
     enum Player {
         case white
         case black
+        var isWhite: Bool {
+            self == .white
+        }
     }
     enum Rank {
         case king

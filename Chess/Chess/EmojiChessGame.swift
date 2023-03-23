@@ -20,23 +20,25 @@ class EmojiChessGame {
 //    static func createPieceContent(player: ChessGame<String>.Player, rank: ChessGame<String>.Rank) -> String {
 //        return "😄"
 //    }
+    private var chessGame: ChessGame<String> = createChessGame()
     
-    private var chessGame: ChessGame<String> = ChessGame<String> { (player, rank) -> String in
-        switch rank {
-        case .king:
-            return player == .white ? "♔" : "♚"
-        case .queen:
-            return player == .white ? "♕" : "♛"
-        case .rook:
-            return player == .white ? "♖" : "♜"
-        case .bishop:
-            return player == .white ? "♗" : "♝"
-        case .knight:
-            return player == .white ? "♘" : "♞"
-        case .pawn:
-            return player == .white ? "♟" : "♙"
+    private static func createChessGame() -> ChessGame<String> {
+        return ChessGame<String> { (player, rank) -> String in
+            switch rank {
+            case .king:
+                return player == .white ? "♔" : "♚"
+            case .queen:
+                return player == .white ? "♕" : "♛"
+            case .rook:
+                return player == .white ? "♖" : "♜"
+            case .bishop:
+                return player == .white ? "♗" : "♝"
+            case .knight:
+                return player == .white ? "♘" : "♞"
+            case .pawn:
+                return player == .white ? "♟" : "♙"
+            }
         }
-        return "😊"
     }
     
 //    private var chessGame: ChessGame<String> = ChessGame<String>(pieceContentFactory: EmojiChessGame.createPieceContent(player:rank:))
