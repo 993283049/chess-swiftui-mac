@@ -13,10 +13,10 @@ struct ChessApp: App {
         WindowGroup {
 //            EmojiChessGameView()
             
-//            let chessGame = EmojiChessGame()
-//            EmojiChessGameView(emojiChessGame: chessGame)
-            let chessGame = LetterChessGame()
-            LetterChessGameView(letterChessGame: chessGame)
+            let chessGame = EmojiChessGame()
+            EmojiChessGameView(emojiChessGame: chessGame)
+//            let chessGame = LetterChessGame()
+//            LetterChessGameView(letterChessGame: chessGame)
         }
     }
 }

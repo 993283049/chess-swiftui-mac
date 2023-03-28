@@ -23,9 +23,17 @@ struct ChessGame<PieceContent> {
         pieces = []
         initChessBoard(piceContentFactory: pieceContentFactory)
     }
+    
+    mutating func movePiece(fromCol: Int, fromRow: Int, toCol: Int, toRow: Int) {
+        guard var movePiece = pieceAt(col: fromCol, row: fromRow) else {
+            return
+        }
+        pieces.remove(movePiece)
+//        movePiece.col = toCol
+//        movePiece.row = toRow
+        pieces.insert(Piece(col: 0, row: 3, rank: movePiece.rank, player: movePiece.player, content: movePiece.content))
+    }
     private mutating func initChessBoard(piceContentFactory: (Player, Rank) -> PieceContent) {
-//        let firstBlackPawn = Piece(col: 0, row: 6, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn))
-//        pieces.insert(firstBlackPawn)
         
         for i in 0..<8 {
             pieces.insert(Piece(col: i, row: 6, rank: .pawn, player: .black, content: piceContentFactory(.black, .pawn)))
@@ -63,8 +71,8 @@ struct ChessGame<PieceContent> {
     enum Player {
         case white
         case black
-        var isWhite: Bool {
-            self == .white
+        func isWhite() -> Bool {
+            return self == .white
         }
     }
     enum Rank {
@@ -76,8 +84,8 @@ struct ChessGame<PieceContent> {
         case pawn
     }
     struct Piece: Equatable, Hashable {
-        let col: Int
-        let row: Int
+        var col: Int
+        var row: Int
         let rank: Rank
         var player: Player
         var content: PieceContent

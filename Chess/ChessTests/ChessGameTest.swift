@@ -11,6 +11,13 @@ import XCTest
 
 final class ChessGameTest: XCTestCase {
     
+    func testMovePiece() {
+        var chessGame = ChessGameTest.createChessGame()
+        chessGame.movePiece(fromCol: 0, fromRow: 1, toCol: 0, toRow: 3)
+        print(chessGame)
+        XCTAssertNotNil(chessGame.pieceAt(col: 0, row: 3))
+    }
+    
     private static func createChessGame() -> ChessGame<String> {
         return ChessGame<String> { (player, rank) -> String in
             switch rank {
@@ -36,7 +43,7 @@ final class ChessGameTest: XCTestCase {
 
         let bottomLeftRook = chessGame.pieceAt(col: 0, row: 0)
         XCTAssertNotNil(bottomLeftRook)
-        XCTAssertTrue(bottomLeftRook!.player.isWhite)
+        XCTAssertTrue(bottomLeftRook!.player.isWhite())
         XCTAssertEqual(.rook, bottomLeftRook!.rank)
     }
     
